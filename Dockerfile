@@ -9,9 +9,11 @@ RUN rm -rf apt-ntop.deb
 RUN apt-get update
 RUN apt-get -y -q install ntopng redis-server libpcap0.8 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN sed -i "s/::1/ /g" /etc/redis/redis.conf
 
 # Run deamons
 RUN sudo service redis-server start
+RUN sudo service ntopng start
 
 # Expose NTOPNG standard http port
 EXPOSE 3000/tcp
