@@ -13,7 +13,7 @@ RUN sed -i "s/::1/ /g" /etc/redis/redis.conf
 
 # Run deamons
 RUN sudo service redis-server start
-RUN sudo service ntopng start
+# RUN sudo service ntopng start
 
 # Expose NTOPNG standard http port
 EXPOSE 3000/tcp
