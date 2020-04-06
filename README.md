@@ -1,2 +1,2 @@
 # ntopng
-Creates a Docker Alpine Linux NTOPNG server
+Creates a Docker Linux NTOPNG server
