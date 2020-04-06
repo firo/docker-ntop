@@ -7,7 +7,7 @@ RUN curl -s --remote-name http://packages.ntop.org/apt/18.04/all/apt-ntop.deb
 RUN dpkg -i apt-ntop.deb
 RUN rm -rf apt-ntop.deb
 RUN apt-get update
-RUN apt-get -y -q install ntopng redis-server libpcap0.8 libmysqlclient18
+RUN apt-get -y -q install ntopng redis-server libpcap0.8 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Run deamons
