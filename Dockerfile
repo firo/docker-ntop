@@ -1,7 +1,9 @@
-FROM alpine:3.11
+FROM ubuntu:latest
 
-RUN apk update 
-RUN apk add redis
+RUN apt-get clean all && apt-get update && apt-get -y dist-upgrade
+RUN apt-get install -y redis-server
+#  apt-get -y install net-tools curl wget perl libdigest-perl-md5-perl ntopng && \
+RUN apt-get clean all
 
 # RUN apt-get install -y redis-server
 # RUN systemctl start redis
