@@ -1,2 +1,2 @@
-# docker-ntop
-Creates an Alpine Linux NTOPNG server
+# ntop
+Creates a Docker Alpine Linux NTOPNG server
